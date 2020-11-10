@@ -1,25 +1,72 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Main from './Main.js';
+import Records from './Records.js';
+import Schedule from './Schedule.js';
+import Settings from './Settings.js';
+import React from 'react';
+import {
+  HashRouter as Router,
+  Route,
+  NavLink,
+  Switch
+} from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Container, Row, Col} from 'react-bootstrap'
+// import Nav from 'react-bootstrap/Nav';
+// import Switch from 'react-bootstrap/esm/Switch';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+  render(){
+    return(
+      <div className="App">
+      <Container>
+       <Router>
+         <Row className="justify-content-center">
+              <NavLink to="/">
+                <div class="Nav-Elem">
+                  <Col sm={2}>                
+                      <span class="text">Home</span>
+                  </Col>
+                </div>
+              </NavLink>
+
+              <NavLink to="/Records">
+                <div class="Nav-Elem">
+                  <Col sm={2}>
+                      <span class="text">Records</span>
+                  </Col>
+                </div>
+              </NavLink>
+
+              <NavLink to="/Schedule">
+                <div class="Nav-Elem">
+                  <Col sm={2}>
+                      <span class="text">Schedule</span>
+                  </Col>
+                </div>
+              </NavLink>
+
+              <NavLink to="/Settings">
+                <div class="Nav-Elem">
+                  <Col sm={2}>
+                      <span class="text">Settings</span>
+                  </Col>
+                </div>
+              </NavLink>
+
+         </Row>
+         <Switch>
+            <Route exact path="/" component={Main} />
+            <Route path="/Records" component={Records}   />
+            <Route path="/Schedule" component={Schedule}   />
+            <Route path="/Settings" component={Settings}   />
+         </Switch>
+        </Router>
+      </Container>
+     </div>
+    )
+  }
 }
 
 export default App;

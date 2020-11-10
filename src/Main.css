@@ -1,0 +1,89 @@
+#title{
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Microsoft YaHei Light';
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#circle{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    background: rgb(255,255,102) ;
+    border-radius: 50%
+}
+
+#time{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Microsoft Yi Baiti';
+    font-size: 80px;
+}
+
+#text{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Microsoft Yi Baiti';
+}
+
+/* #time-opt{
+    position: fixed;
+    top: 70%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    font-family: 'Microsoft Yi Baiti';
+    font-size: 28px;
+} */
+
+#time-text1{
+    position: fixed;
+    top: 70%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-family: 'Microsoft Yi Baiti';
+    font-size: 28px;
+}
+#time-text2{
+    position: fixed;
+    top: 70%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    font-family: 'Microsoft Yi Baiti';
+    font-size: 28px;
+}
+
+#bottom{
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    width: 100%;
+    height: 5%;
+    transform: translate(-50%, -50%);
+    background: rgb(102,102,204,0.6) ;
+    font-family: 'Microsoft Yi Baiti';
+    font-size: 30px;
+}
+
+@media screen and (max-width: 640px) {
+    #time-text1{
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #time-text2{
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
