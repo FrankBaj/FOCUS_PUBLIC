@@ -1,0 +1,17 @@
+table{
+    margin-top: 5%;
+}
+
+#sort{
+    margin-top: 20%;
+    margin-right: 70%;
+    background-color: rgba(102,102,204,0.2);
+    font-family: 'Microsoft Yi Baiti';
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#delete{
+    margin-left: 70%;
+    background-color: rgb(204,112,98,0.2);
+}
