@@ -13,8 +13,6 @@ import {
 } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Container, Row, Col} from 'react-bootstrap'
-// import Nav from 'react-bootstrap/Nav';
-// import Switch from 'react-bootstrap/esm/Switch';
 
 class App extends React.Component{
   render(){

@@ -199,7 +199,6 @@ export default class Schedule extends React.Component{
                         placeholder = "YYYY"
                         defaultValue = {this.state.year}
                         onChange = {(e) => this.setState({year: e.target.value})}
-                        // onChange = {this.changeInput}
                       />
                     </Form.Group>
                     <Form.Group as={Col} sm="2">
