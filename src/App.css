@@ -14,6 +14,17 @@
   background-color: rgb(147, 147, 255);
 }
 
+#Nav-Elem-Title{
+  font-family: 'Microsoft YaHei Light';
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#Nav-Elem-Title:hover{
+  background-color: rgb(147, 147, 255);
+}
+
 .text{
   color: black;
 }

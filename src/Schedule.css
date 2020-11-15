@@ -1,0 +1,38 @@
+#page_data{
+    margin-top: 70px;
+}
+
+#input_area{
+    left:50%;
+    /* text-align: center; */
+}
+
+#delete:hover{
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(204,112,98,0.5);
+}
+
+#in_row_delete:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.field{
+    padding-left: 50px;
+}
+
+#background{
+    background-color: rgba(153,153,255,0.75) ;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-left: 30px;
+    width: 100%;
+}
+
+.label{
+    margin-right: 10px;
+    font-family: 'Microsoft Yi Baiti';
+    font-weight: bold;
+    font-size: 25px;
+}

@@ -8,10 +8,12 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import ListGroup from 'react-bootstrap/ListGroup';
+import InputGroup from 'react-bootstrap/InputGroup';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import {Dropdown } from 'react-bootstrap';
 
 import rainEffects from './rainEffects.mp3';
 import wind_animal_Effects from './wind_Animal_Sound.mp3';
-import {Dropdown } from 'react-bootstrap';
 
 export default class Main extends React.Component{
   constructor(props){
@@ -185,13 +187,6 @@ export default class Main extends React.Component{
       return(
         <div>
           <Container>
-            <div>
-              <Row>
-                <Col>
-                  <span id="title"> F O C U S </span>
-                </Col>
-              </Row>
-            </div>
 
             <div id="circle">
               <Row>
@@ -203,45 +198,55 @@ export default class Main extends React.Component{
               </Row>
             </div>
 
-            {/* <div>
-              <Dropdown>
-                <Dropdown.Toggle>
-                  Normal Timer Options
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                  <Dropdown.Item onClick={this.handleTimerStart}>Start Timer</Dropdown.Item>
-                  <Dropdown.Item onClick={this.handleTimerStop}>Stop Timer</Dropdown.Item>
-                  <Dropdown.Item onClick={this.handleTimerReset}>Reset Timer</Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
-            </div> */}
-
             <div id="time-opt">
-              <Row>
-                <Col>
-                  <span id="time-text1" onClick={this.handleTimerStart}>Start Timer</span>
-                </Col>
-                {/* <Col>
-                  <span id="time-text3" onClick={this.handleTimerSave}>Save Timer</span>
-                </Col> */}
-                <Col>
-                  <span id="time-text2" onClick={this.handleTimerStop}>Stop Timer</span>
-                </Col>
-                <Col>
-                  <span id="time-text3" onClick={this.handleTimerReset}>Reset Timer</span>
-                </Col>
-                <Col>
-                  <span id="time-text5" onClick={this.countDownTimer}>Start Countdown</span>
-                </Col>
-              </Row>
+              <Form.Group id="input_forms">
+                <Form onSubmit={this.submitTime}>
+                  <InputGroup className="mb-3" size="md">
+                    < InputGroup.Prepend>
+                      <InputGroup.Text id="label">Enter a Time: </InputGroup.Text>
+                    </InputGroup.Prepend>
+                    <Form.Control
+                      type ="text"
+                      placeholder = "Hour"
+                      defaultValue = {this.state.setHours}
+                      onChange = {(e) => this.setState({setHours: e.target.value})}
+                    />
+                    <Form.Control
+                      type ="text"
+                      placeholder = "Minute"
+                      defaultValue = {this.state.setMin}
+                      onChange = {(e) => this.setState({setMin: e.target.value})}              
+                    />
+                    <Form.Control
+                      type ="text"
+                      placeholder = "Second"
+                      defaultValue = {this.state.setSec}
+                      onChange = {(e) => this.setState({setSec: e.target.value})}              
+                    />
+                    <InputGroup.Append>
+                      <Button variant="outline-secondary" type="submit" value="Submit" >Submit</Button>
+                    </InputGroup.Append>
+                  </InputGroup>
+                </Form>
+                &nbsp;
+                <DropdownButton
+                  size="md"
+                  drop={'up'}
+                  title={'Timer Options'}
+                  id="input_forms"
+                >
+                  <Dropdown.Item as="button" onClick={this.handleTimerStart}>Start Count-up Timer</Dropdown.Item>
+                  <Dropdown.Item as="button" onClick={this.countDownTimer}>Start Count-down Timer</Dropdown.Item>
+                  <Dropdown.Item as="button" onClick={this.handleTimerStop}>Stop Timer</Dropdown.Item>
+                  <Dropdown.Item as="button" onClick={this.handleTimerReset}>Reset Timer</Dropdown.Item>
+                </DropdownButton>
+              </Form.Group>
             </div>
 
             <div id="bottom">
               <Row>
                 <Col>
                   <span id="text">
-                  <div>
-                    <span>
                       <ListGroup horizontal>
                         {list}
                         <Form>
@@ -278,47 +283,87 @@ export default class Main extends React.Component{
                       </ListGroup>          
                       <audio ref={ref => this.player = ref}/>
                     </span>
-                  </div>
-                  </span>
                 </Col>
               </Row>
             </div>
 
+
+
             <div id="below_bottom">
-              <Row>
+            {/* <Form.Group id="input_forms">
+                <Form onSubmit={this.submitTime}>
+                  <InputGroup className="mb-3" size="md">
+                    < InputGroup.Prepend>
+                      <InputGroup.Text id="label">Enter a Time: </InputGroup.Text>
+                    </InputGroup.Prepend>
+                    <Form.Control
+                      type ="text"
+                      placeholder = "Hour"
+                      defaultValue = {this.state.setHours}
+                      onChange = {(e) => this.setState({setHours: e.target.value})}
+                    />
+                    <Form.Control
+                      type ="text"
+                      placeholder = "Minute"
+                      defaultValue = {this.state.setMin}
+                      onChange = {(e) => this.setState({setMin: e.target.value})}              
+                    />
+                    <Form.Control
+                      type ="text"
+                      placeholder = "Second"
+                      defaultValue = {this.state.setSec}
+                      onChange = {(e) => this.setState({setSec: e.target.value})}              
+                    />
+                    <InputGroup.Append>
+                      <Button variant="outline-secondary" type="submit" value="Submit" >Submit</Button>
+                    </InputGroup.Append>
+                  </InputGroup>
+                </Form>
+                &nbsp;
+                <DropdownButton
+                  size="md"
+                  drop={'up'}
+                  title={'Timer Options'}
+                  id="input_forms"
+                >
+                  <Dropdown.Item as="button" onClick={this.handleTimerStart}>Start Count-up Timer</Dropdown.Item>
+                  <Dropdown.Item as="button" onClick={this.countDownTimer}>Start Count-down Timer</Dropdown.Item>
+                  <Dropdown.Item as="button" onClick={this.handleTimerStop}>Stop Timer</Dropdown.Item>
+                  <Dropdown.Item as="button" onClick={this.handleTimerReset}>Reset Timer</Dropdown.Item>
+                </DropdownButton>
+              </Form.Group> */}
+              {/* <Row>
                 <Col>
                   <Form onSubmit={this.submitTime}>
-                    <Form.Row>
-                    <Form.Label id="time_label">Enter a Time:</Form.Label>
-                      <Form.Group as={Col} sm="1">
-                        <Form.Control
-                          type ="text"
-                          placeholder = "Hour"
-                          defaultValue = {this.state.setHours}
-                          onChange = {(e) => this.setState({setHours: e.target.value})}
-                        />
-                      </Form.Group>
-                      <Form.Group as={Col} sm="1">
-                        <Form.Control
-                          type ="text"
-                          placeholder = "Min"
-                          defaultValue = {this.state.setMin}
-                          onChange = {(e) => this.setState({setMin: e.target.value})}
-                        />
-                      </Form.Group>
-                      <Form.Group as={Col} sm="1">
-                        <Form.Control
-                          type ="text"
-                          placeholder = "Sec"
-                          defaultValue = {this.state.setSec}
-                          onChange = {(e) => this.setState({setSec: e.target.value})}
-                        />
-                      </Form.Group>
-                      <Button variant="light" size="lg" type="submit" value="Submit">Submit</Button>
-                    </Form.Row>
+                    <InputGroup className="mb-3" size="md">
+                      < InputGroup.Prepend>
+                        <InputGroup.Text>Enter a Time: </InputGroup.Text>
+                      </InputGroup.Prepend>
+                      <Form.Control
+                        type ="text"
+                        placeholder = "Hour"
+                        defaultValue = {this.state.setHours}
+                        onChange = {(e) => this.setState({setHours: e.target.value})}
+                      />
+                      <Form.Control
+                        type ="text"
+                        placeholder = "Minute"
+                        defaultValue = {this.state.setMin}
+                        onChange = {(e) => this.setState({setMin: e.target.value})}              
+                      />
+                      <Form.Control
+                        type ="text"
+                        placeholder = "Second"
+                        defaultValue = {this.state.setSec}
+                        onChange = {(e) => this.setState({setSec: e.target.value})}              
+                      />
+                      <InputGroup.Append>
+                        <Button variant="outline-secondary" type="submit" value="Submit" >Submit</Button>
+                      </InputGroup.Append>
+                    </InputGroup>
                   </Form>
                 </Col>
-              </Row>
+              </Row> */}
             </div>
 
             {/* <div>

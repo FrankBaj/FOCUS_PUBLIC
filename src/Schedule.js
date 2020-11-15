@@ -168,6 +168,7 @@ export default class Schedule extends React.Component{
         id:'delete',
         Cell: ({row}) => (
         <span
+        id = "in_row_delete"
         onClick={() => {
           let data = [...this.state.data];
           console.log(this.state.data[row.index]);
@@ -182,18 +183,17 @@ export default class Schedule extends React.Component{
     ]
 
       return(
-        <div>
+        <div id="page_data">
           <Container>
             <Row>
               <Col>
 
-                <div>
+                <div id="input_area">
                   <Form onSubmit={this.saveDate}>
                   
-                  <Form.Row>
-                    <Form.Label>Enter a Date:</Form.Label>
+                  <Form.Row id="background">
+                    <Form.Label class="label">Enter a Date:</Form.Label>
                     <Form.Group as={Col} sm="2">
-                    <br />
                       <Form.Control required 
                         type ="text"
                         placeholder = "YYYY"
@@ -202,8 +202,7 @@ export default class Schedule extends React.Component{
                       />
                     </Form.Group>
                     <Form.Group as={Col} sm="2">
-                    <br />
-                      <Form.Control required 
+                      <Form.Control required
                         type ="text"
                         placeholder = "MM"
                         defaultValue = {this.state.month}
@@ -211,8 +210,7 @@ export default class Schedule extends React.Component{
                       />
                     </Form.Group>
                     <Form.Group as={Col} sm="2">
-                    <br />
-                      <Form.Control required 
+                      <Form.Control required
                         type ="text"
                         placeholder = "DD"
                         defaultValue = {this.state.day}
@@ -221,10 +219,9 @@ export default class Schedule extends React.Component{
                     </Form.Group>
                   </Form.Row>
 
-                  <Form.Row>
-                  <Form.Label>Set Time:</Form.Label>
+                  <Form.Row id="background">
+                  <Form.Label class="label">Set Time:</Form.Label>
                     <Form.Group>
-                      <br />
                       <Form.Control 
                         size="sm" 
                         as="select"
@@ -246,7 +243,6 @@ export default class Schedule extends React.Component{
                       </Form.Control>
                     </Form.Group>
                     <Form.Group>
-                      <br />
                       <Form.Control 
                         size="sm" 
                         as="select"
@@ -268,7 +264,6 @@ export default class Schedule extends React.Component{
                       </Form.Control>
                     </Form.Group>
                     <Form.Group>
-                      <br />
                       <Form.Control 
                         size="sm" 
                         as="select"
@@ -281,10 +276,9 @@ export default class Schedule extends React.Component{
                     </Form.Group>            
                   </Form.Row>
 
-                  <Form.Row>
-                  <Form.Label>Set Duration:</Form.Label>
+                  <Form.Row id="background">
+                  <Form.Label class="label">Set Duration:</Form.Label>
                     <Form.Group>
-                      <br />
                       <Form.Control 
                         size="sm" 
                         as="select"
@@ -307,7 +301,6 @@ export default class Schedule extends React.Component{
                       </Form.Control>
                     </Form.Group>
                     <Form.Group>
-                      <br />
                       <Form.Control 
                         size="sm" 
                         as="select"
@@ -330,10 +323,9 @@ export default class Schedule extends React.Component{
                     </Form.Group>
                   </Form.Row>
                   
-                  <Form.Row>
-                  <Form.Label>Session Type:</Form.Label>
+                  <Form.Row id="background">
+                  <Form.Label class="label">Session Type:</Form.Label>
                     <Form.Group>
-                      <br />
                       <Form.Control 
                         size="sm" 
                         as="select"

@@ -131,31 +131,7 @@ export default class Records extends React.Component{
     },{
       Header: 'Type',
       accessor: 'type',
-      Filter: SelectFilter,
       filter: 'includes'
-
-      // filterable: true,
-      //       filterMethod: (filter, row) => {
-      //         if (filter.value === "all") {
-      //           return true;
-      //         }
-      //         if (filter.value === "Md") {
-      //           return row[filter.id] === "Meditation";
-      //         }
-      //         if (filter.value === "Cnc") {
-      //           return row[filter.id] === "Concentration";
-      //         }
-      //       },
-      // Filter: ({ filter, onChange }) =>
-      // <select
-      //   onChange={event => onChange(event.target.value)}
-      //   style={{ width: "100%" }}
-      //   value={filter ? filter.value : "all"}
-      // >
-      //   <option value="all">Show All</option>
-      //   <option value="Md">Meditation</option>
-      //   <option value="Cnc">Concentration</option>
-      // </select>
     },{
       Header: 'Time',
       accessor: 'time'

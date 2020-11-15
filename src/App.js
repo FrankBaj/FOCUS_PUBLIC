@@ -21,18 +21,19 @@ class App extends React.Component{
       <Container>
        <Router>
          <Row className="justify-content-center">
-              <NavLink to="/">
-                <div class="Nav-Elem">
-                  <Col sm={2}>                
-                      <span class="text">Home</span>
-                  </Col>
-                </div>
-              </NavLink>
 
               <NavLink to="/Records">
                 <div class="Nav-Elem">
                   <Col sm={2}>
                       <span class="text">Records</span>
+                  </Col>
+                </div>
+              </NavLink>
+
+              <NavLink to="/">
+                <div id="Nav-Elem-Title">
+                  <Col>                
+                      <span class="text">F O C U S</span>
                   </Col>
                 </div>
               </NavLink>
