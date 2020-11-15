@@ -1,0 +1,6 @@
+Hello.
+
+The instructions for running this are pretty simple. 
+Just make sure you have Node.js installed, unzip the folder, then run "npm install" first, and then "npm start" to launch the application.
+
+If there are any problems with running it, just let me know VIA Microsoft Teams.
