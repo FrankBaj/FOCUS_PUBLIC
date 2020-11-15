@@ -3,7 +3,6 @@ import './App.css';
 import Main from './Main.js';
 import Records from './Records.js';
 import Schedule from './Schedule.js';
-import Settings from './Settings.js';
 import React from 'react';
 import {
   HashRouter as Router,

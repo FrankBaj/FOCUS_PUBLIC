@@ -60,35 +60,6 @@ function Table({columns, data}) {
   )
 }
 
-function SelectFilter({
-  column: {filterValue, setFilter, preFilteredRows, id},
-}){
-  const options = React.useMemo(() => {
-    const options = new Set()
-    preFilteredRows.forEach(row => {
-      options.add(row.values[id])
-    })
-    return [...options.values()]
-  }, [id, preFilteredRows])
-  return (
-    <select
-      value={filterValue}
-      onChange={e => {
-        setFilter(e.target.value || undefined)
-      }}
-    >
-      <option value="">All</option>
-      {options.map((option, i) => (
-        <option key={i} value={option}>
-          {option}
-        </option>
-      ))}
-    </select>
-  )
-}
-
-
-
 export default class Records extends React.Component{
   constructor(props){
     super(props)
@@ -97,7 +68,7 @@ export default class Records extends React.Component{
             [{
               date: '2020/08/22',
               type: 'Meditation',
-              time: '00:01:30'
+              time: '00:01:00'
             },{
               date: '2019/08/01',
               type: 'Concentration',
@@ -109,11 +80,11 @@ export default class Records extends React.Component{
             },{
               date: '2020/09/15',
               type: 'Concentration',
-              time: '02:10:30'
+              time: '02:10:25'
             },{
               date: '2020/07/18',
               type: 'Meditation',
-              time: '00:22:30'
+              time: '00:22:55'
             },{
               date: '2020/11/15',
               type: 'Concentration',
