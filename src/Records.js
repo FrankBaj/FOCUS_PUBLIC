@@ -95,7 +95,7 @@ export default class Records extends React.Component{
     this.state = {
       data: 
             [{
-              date: '2020/08/01',
+              date: '2020/08/22',
               type: 'Meditation',
               time: '00:01:30'
             },{
@@ -106,6 +106,18 @@ export default class Records extends React.Component{
               date: '2020/11/01',
               type: 'Meditation',
               time: '00:10:30'
+            },{
+              date: '2020/09/15',
+              type: 'Concentration',
+              time: '02:10:30'
+            },{
+              date: '2020/07/18',
+              type: 'Meditation',
+              time: '00:22:30'
+            },{
+              date: '2020/11/15',
+              type: 'Concentration',
+              time: '00:50:30'
             }]
     }
   }
@@ -153,14 +165,6 @@ export default class Records extends React.Component{
       return(
         <div>
           <Container>
-            <Row>
-              <Col>
-              <div id="sort">
-                Order By:
-              </div>
-              </Col>
-            </Row>
-            
             <Row>
               <Col>
                 <div id='table'>

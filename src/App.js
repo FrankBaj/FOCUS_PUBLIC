@@ -45,20 +45,11 @@ class App extends React.Component{
                 </div>
               </NavLink>
 
-              <NavLink to="/Settings">
-                <div class="Nav-Elem">
-                  <Col sm={2}>
-                      <span class="text">Settings</span>
-                  </Col>
-                </div>
-              </NavLink>
-
          </Row>
          <Switch>
             <Route exact path="/" component={Main} />
             <Route path="/Records" component={Records}   />
             <Route path="/Schedule" component={Schedule}   />
-            <Route path="/Settings" component={Settings}   />
          </Switch>
         </Router>
       </Container>
