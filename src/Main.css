@@ -37,6 +37,10 @@
     font-family: 'Microsoft Yi Baiti';
 }
 
+#input_text{
+    font-size: 20px;
+}
+
 #time-opt{
     position: fixed;
     top: 77%;
@@ -60,10 +64,12 @@
 
 #input_forms{
     display: flex;
+    font-size: 20px;
 }
 
 #label{
     font-weight: bolder;
+    font-size: 20px;
 }
 
 #below_bottom{
@@ -107,7 +113,7 @@
     left: 70%
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 800px) {
     #time-text1{
         top: 65%;
         left: 50%;
@@ -117,5 +123,16 @@
         top: 70%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+    #time-opt{
+        width: 95%;
+    }
+    #sound_elements{
+        margin-left: 20px;
+    }
+    #slider{
+        margin-left: 20px;
+        width: 100%;
+        font-size: 25px;
     }
 }

@@ -208,25 +208,28 @@ export default class Main extends React.Component{
                       <InputGroup.Text id="label">Enter a Time: </InputGroup.Text>
                     </InputGroup.Prepend>
                     <Form.Control
+                      id = "input_text"
                       type ="text"
                       placeholder = "Hour"
                       defaultValue = {this.state.setHours}
                       onChange = {(e) => this.setState({setHours: e.target.value})}
                     />
                     <Form.Control
+                      id = "input_text"
                       type ="text"
                       placeholder = "Minute"
                       defaultValue = {this.state.setMin}
                       onChange = {(e) => this.setState({setMin: e.target.value})}              
                     />
                     <Form.Control
+                      id = "input_text"
                       type ="text"
                       placeholder = "Second"
                       defaultValue = {this.state.setSec}
                       onChange = {(e) => this.setState({setSec: e.target.value})}              
                     />
                     <InputGroup.Append>
-                      <Button variant="outline-secondary" type="submit" value="Submit" >Submit</Button>
+                      <Button id = "input_text" variant="outline-secondary" type="submit" value="Submit" >Submit</Button>
                     </InputGroup.Append>
                   </InputGroup>
                 </Form>
@@ -237,10 +240,10 @@ export default class Main extends React.Component{
                   title={'Timer Options'}
                   id="input_forms"
                 >
-                  <Dropdown.Item as="button" onClick={this.handleTimerStart}>Start Count-up Timer</Dropdown.Item>
-                  <Dropdown.Item as="button" onClick={this.countDownTimer}>Start Count-down Timer</Dropdown.Item>
-                  <Dropdown.Item as="button" onClick={this.handleTimerStop}>Stop Timer</Dropdown.Item>
-                  <Dropdown.Item as="button" onClick={this.handleTimerReset}>Reset Timer</Dropdown.Item>
+                  <Dropdown.Item id="input_forms" as="button" onClick={this.handleTimerStart}>Start Count-up Timer</Dropdown.Item>
+                  <Dropdown.Item id="input_forms" as="button" onClick={this.countDownTimer}>Start Count-down Timer</Dropdown.Item>
+                  <Dropdown.Item id="input_forms" as="button" onClick={this.handleTimerStop}>Stop Timer</Dropdown.Item>
+                  <Dropdown.Item id="input_forms" as="button" onClick={this.handleTimerReset}>Reset Timer</Dropdown.Item>
                 </DropdownButton>
               </Form.Group>
             </div>
@@ -252,7 +255,7 @@ export default class Main extends React.Component{
                       <ListGroup horizontal>
                         {list}
                         <Form>
-                          <Form.Label id="sound_elements" >Volume:</Form.Label>
+                          <Form.Label id ="slider" >Volume:</Form.Label>
                             <Form.Group controlId="formBasicRangeCustom">
                               <Form.Control id ="slider"
                                 type="range"
