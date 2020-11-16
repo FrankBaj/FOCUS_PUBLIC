@@ -185,14 +185,11 @@ export default class Schedule extends React.Component{
       return(
         <div id="page_data">
           <Container>
-            <Row>
-              <Col>
-
-                <div id="input_area">
+                <div id="test">
                   <Form onSubmit={this.saveDate}>
                   
-                  <Form.Row id="background">
-                    <Form.Label class="label">Enter a Date:</Form.Label>
+                  <Form.Row className="background">
+                    <Form.Label className="label">Enter a Date:</Form.Label>
                     <Form.Group as={Col} sm="2">
                       <Form.Control required 
                         type ="text"
@@ -219,8 +216,8 @@ export default class Schedule extends React.Component{
                     </Form.Group>
                   </Form.Row>
 
-                  <Form.Row id="background">
-                  <Form.Label class="label">Set Time:</Form.Label>
+                  <Form.Row className="background">
+                  <Form.Label className="label">Set Time:</Form.Label>
                     <Form.Group>
                       <Form.Control 
                         size="sm" 
@@ -276,8 +273,8 @@ export default class Schedule extends React.Component{
                     </Form.Group>            
                   </Form.Row>
 
-                  <Form.Row id="background">
-                  <Form.Label class="label">Set Duration:</Form.Label>
+                  <Form.Row className="background">
+                  <Form.Label className="label">Set Duration:</Form.Label>
                     <Form.Group>
                       <Form.Control 
                         size="sm" 
@@ -323,8 +320,8 @@ export default class Schedule extends React.Component{
                     </Form.Group>
                   </Form.Row>
                   
-                  <Form.Row id="background">
-                  <Form.Label class="label">Session Type:</Form.Label>
+                  <Form.Row className="background">
+                  <Form.Label className="label">Session Type:</Form.Label>
                     <Form.Group>
                       <Form.Control 
                         size="sm" 
@@ -339,10 +336,7 @@ export default class Schedule extends React.Component{
                   </Form.Row>
                   <Button type="submit" value="Submit">Save Date</Button>
                 </Form>
-                </div>
-
-              </Col>
-            </Row>
+              </div>
 
             <Row>
               <Col>

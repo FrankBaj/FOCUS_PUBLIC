@@ -144,8 +144,9 @@ export default class Main extends React.Component{
         }
         if(track){
           this.player.src = track;
-          this.player.play()
-          this.setState({player: "playing"})
+          this.player.play();
+          this.setState({player: "playing"});
+          this.player.loop = true;
         } 
       }
       if (this.state.player !== prevState.player){
@@ -159,7 +160,8 @@ export default class Main extends React.Component{
           this.state.player === "playing" &&
           prevState.player === "paused"
         ){
-          this.player.play()
+          this.player.play();
+          this.player.loop = true;
         }
       }
   }
@@ -290,82 +292,6 @@ export default class Main extends React.Component{
 
 
             <div id="below_bottom">
-            {/* <Form.Group id="input_forms">
-                <Form onSubmit={this.submitTime}>
-                  <InputGroup className="mb-3" size="md">
-                    < InputGroup.Prepend>
-                      <InputGroup.Text id="label">Enter a Time: </InputGroup.Text>
-                    </InputGroup.Prepend>
-                    <Form.Control
-                      type ="text"
-                      placeholder = "Hour"
-                      defaultValue = {this.state.setHours}
-                      onChange = {(e) => this.setState({setHours: e.target.value})}
-                    />
-                    <Form.Control
-                      type ="text"
-                      placeholder = "Minute"
-                      defaultValue = {this.state.setMin}
-                      onChange = {(e) => this.setState({setMin: e.target.value})}              
-                    />
-                    <Form.Control
-                      type ="text"
-                      placeholder = "Second"
-                      defaultValue = {this.state.setSec}
-                      onChange = {(e) => this.setState({setSec: e.target.value})}              
-                    />
-                    <InputGroup.Append>
-                      <Button variant="outline-secondary" type="submit" value="Submit" >Submit</Button>
-                    </InputGroup.Append>
-                  </InputGroup>
-                </Form>
-                &nbsp;
-                <DropdownButton
-                  size="md"
-                  drop={'up'}
-                  title={'Timer Options'}
-                  id="input_forms"
-                >
-                  <Dropdown.Item as="button" onClick={this.handleTimerStart}>Start Count-up Timer</Dropdown.Item>
-                  <Dropdown.Item as="button" onClick={this.countDownTimer}>Start Count-down Timer</Dropdown.Item>
-                  <Dropdown.Item as="button" onClick={this.handleTimerStop}>Stop Timer</Dropdown.Item>
-                  <Dropdown.Item as="button" onClick={this.handleTimerReset}>Reset Timer</Dropdown.Item>
-                </DropdownButton>
-              </Form.Group> */}
-              {/* <Row>
-                <Col>
-                  <Form onSubmit={this.submitTime}>
-                    <InputGroup className="mb-3" size="md">
-                      < InputGroup.Prepend>
-                        <InputGroup.Text>Enter a Time: </InputGroup.Text>
-                      </InputGroup.Prepend>
-                      <Form.Control
-                        type ="text"
-                        placeholder = "Hour"
-                        defaultValue = {this.state.setHours}
-                        onChange = {(e) => this.setState({setHours: e.target.value})}
-                      />
-                      <Form.Control
-                        type ="text"
-                        placeholder = "Minute"
-                        defaultValue = {this.state.setMin}
-                        onChange = {(e) => this.setState({setMin: e.target.value})}              
-                      />
-                      <Form.Control
-                        type ="text"
-                        placeholder = "Second"
-                        defaultValue = {this.state.setSec}
-                        onChange = {(e) => this.setState({setSec: e.target.value})}              
-                      />
-                      <InputGroup.Append>
-                        <Button variant="outline-secondary" type="submit" value="Submit" >Submit</Button>
-                      </InputGroup.Append>
-                    </InputGroup>
-                  </Form>
-                </Col>
-              </Row> */}
-            </div>
-
             {/* <div>
               <Col>
               {this.state.captures.map((time, index) => {
@@ -373,6 +299,7 @@ export default class Main extends React.Component{
               })}
               </Col>
             </div> */}
+            </div>
           </Container>
         </div>
       )

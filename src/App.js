@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import './App.css';
 import Main from './Main.js';
 import Records from './Records.js';
@@ -8,7 +7,8 @@ import {
   HashRouter as Router,
   Route,
   NavLink,
-  Switch
+  Switch,
+  Redirect,
 } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Container, Row, Col} from 'react-bootstrap'
@@ -21,15 +21,15 @@ class App extends React.Component{
        <Router>
          <Row className="justify-content-center">
 
-            <NavLink to="/">
+            <NavLink activeClassName={"active"} to="/Main">
                 <div id="Nav-Elem-Title">
                   <Col>                
-                      <span class="text">FOCUS</span>
+                      <span class="text">F O C U S</span>
                   </Col>
                 </div>
             </NavLink>
 
-              <NavLink to="/Records">
+              <NavLink activeClassName={"active"} to="/Records">
                 <div class="Nav-Elem">
                   <Col sm={2}>
                       <span class="text">Records</span>
@@ -37,7 +37,7 @@ class App extends React.Component{
                 </div>
               </NavLink>
 
-              <NavLink to="/Schedule">
+              <NavLink activeClassName={"active"} to="/Schedule">
                 <div class="Nav-Elem">
                   <Col sm={2}>
                       <span class="text">Schedule</span>
@@ -47,7 +47,8 @@ class App extends React.Component{
 
          </Row>
          <Switch>
-            <Route exact path="/" component={Main} />
+            <Redirect exact from="/" to="/Main"/>
+            <Route path="/Main" component={Main} />
             <Route path="/Records" component={Records}   />
             <Route path="/Schedule" component={Schedule}   />
          </Switch>
