@@ -85,6 +85,7 @@
 
 #slider{
     width: 50%;
+    font-size: 25px;
 }
 
 #sound_buttons{
@@ -134,5 +135,8 @@
         margin-left: 20px;
         width: 100%;
         font-size: 25px;
+    }
+    #sound_buttons{
+        margin-left: 40px;
     }
 }
