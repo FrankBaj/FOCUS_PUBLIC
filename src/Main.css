@@ -39,6 +39,8 @@
 
 #input_text{
     font-size: 20px;
+    font-weight: bold;
+    color: black;
 }
 
 #time-opt{
@@ -70,6 +72,7 @@
 #label{
     font-weight: bolder;
     font-size: 20px;
+    color: black;
 }
 
 #below_bottom{
