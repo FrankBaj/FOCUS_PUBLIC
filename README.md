@@ -1,5 +1,5 @@
 # FOCUS
-- This repository contains all of the files for the class project for my 4HC3 Human Computer Interfaces course.
+- This repository contains all of the files for the project for my 4HC3 Human Computer Interfaces course.
 
 # Project Contributers:
 - Francis Bajamunde (This was a solo-project)
